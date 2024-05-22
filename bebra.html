@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гра з паролем</title>
+</head>
+<body>
+    <div id="game-container">
+        <p>Ласкаво просимо до гри. Щоб отримати пароль, виконайте завдання.</p>
+        <button onclick="taskOne()">Виконати завдання 1</button>
+        <button onclick="taskTwo()">Виконати завдання 2</button>
+        <button onclick="taskThree()">Виконати завдання 3</button>
+        <p id="password"></p>
+    </div>
+
+    <script>
+        var tasksCompleted = 0;
+
+        function taskOne() {
+            tasksCompleted++;
+            checkTasksCompleted();
+        }
+
+        function taskTwo() {
+            tasksCompleted++;
+            checkTasksCompleted();
+        }
+
+        function taskThree() {
+            tasksCompleted++;
+            checkTasksCompleted();
+        }
+
+        function checkTasksCompleted() {
+            if (tasksCompleted === 3) {
+                var passwordElement = document.getElementById('password');
+                var password = generatePassword();
+                passwordElement.textContent = "Пароль: " + password;
+            }
+        }
+
+        function generatePassword() {
+            // Генеруємо випадковий пароль, можна використати будь-який метод генерації
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            var password = '';
+            for (var i = 0; i < 8; i++) {
+                password += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return password;
+        }
+    </script>
+</body>
+</html>

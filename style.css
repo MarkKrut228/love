@@ -1,0 +1,55 @@
+body{
+    background-color: red;
+}
+
+.painel{
+    margin: auto;
+    background-color: white;
+    width: 375px;
+    height: 500px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#sim{
+    height: 40px;
+    width: 60px;
+    background-color: red;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    margin-left: -70px;
+}
+#nao{
+    position: absolute;
+    height: 40px;
+    width: 60px;
+    background-color: red;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    margin-left: 10px;
+}
+
+.hi{
+    margin-top: 200px;
+}
+
+
+
+
+.image-link {
+    margin: auto;
+    
+    width: 355px;
+    height: 200px;
+    
+    text-align: center;
+    padding-top: 5000px;
+}
+
+.full-screen-image{
+width: 180px;
+height: 180px;
+}

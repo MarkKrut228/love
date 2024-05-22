@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>для сонічки</title>
+
+    <style>
+        @font-face {
+            font-family: 'Press Start 2P';
+            src: url('https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euG8wG0-eo8sJHBJmbtKls8nsCU.ttf') format('truetype');
+        }
+
+        body {
+            min-width: 480px;
+            background-image: url('love/s1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'AvenirNextCyr', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #333;
+            cursor: default;
+            transition: background-image 0.5s ease-in-out;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .button-container {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        .pixel-button {
+            background-color: #25002e;
+            color: #ec8cff;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #ff00f7;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        .pixel-button:hover {
+            background-color: #350042;
+            transform: translate(2px, 2px);
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #25002e;
+            color: #ec8cff;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #ff00f7;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        .back-button:hover {
+            background-color: #350042;
+            transform: translate(2px, 2px);
+        }
+    </style>
+
+</head>
+<body>
+    <a href="osnov.html" class="back-button">Назад</a>
+    <div class="button-container">
+        <button class="pixel-button" onclick="prevImage()">Назад</button>
+        <button class="pixel-button" onclick="nextImage()">Вперед</button>
+    </div>
+
+    <script>
+        const images = [
+            'love/s1.jpg',
+            'love/s2.jpg',
+            'love/s3.png',
+            'love/s4.jpg',
+            'love/s5.jpg',
+            'love/s6.jpg',
+            'love/s7.png',
+            'love/s8.jpg',
+            'love/s9.jpg',
+            'love/s10.jpg',
+            'love/s11.jpg',
+            'love/s12.jpg',
+            'love/s13.png',
+            'love/s14.jpg',
+            'love/s15.jpg',
+        ];
+        let currentIndex = 0;
+
+        function updateBackground() {
+            document.body.style.backgroundImage = `url('${images[currentIndex]}')`;
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateBackground();
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateBackground();
+        }
+    </script>
+</body>
+</html>
