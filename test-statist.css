@@ -12,10 +12,10 @@ body {
 
 .container {
     background: white;
-    padding: 20px;
+    padding: 5px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 90%;
+    width: 70%;
     max-width: 400px;
     text-align: center;
 }
@@ -71,7 +71,7 @@ body {
 
 .pixel_button {
     margin-top: 90px;
-    margin-left: -355px;
+    margin-left: -275px;
     display: inline-block;
     padding: 5px 8px;
     font-size: 15px;
